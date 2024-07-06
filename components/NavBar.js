@@ -9,16 +9,16 @@ const NavBar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="container flex items-center justify-between my-[32px]">
+    <nav className="container flex items-center justify-between my-8">
       <Link className="flex items-center gap-2" href="/">
         <Image
           src="/assets/images/logo.png"
           width={80}
           height={78.1}
         />
-        <h3 className="poller text-[30px] text-primaryBg uppercase">Sole Mart</h3>
+        <h3 className="poller text-3xl text-primaryBg uppercase">Sole Mart</h3>
       </Link>
-      <div className="flex items-center gap-[57px] poppins text-[16px]">
+      <div className="hidden xl:flex items-center gap-14 poppins text-base">
         <Link className={`relative ${pathname === '/' ? 'active' : ''}`} href="/">Home<span></span></Link>
         <Link className={`relative ${pathname === '/productListing' ? 'active' : ''}`} href="/productListing">Product Listing Page<span></span></Link>
         <Link className={`relative ${pathname === '/collections' ? 'active' : ''}`} href="/collections">Collections<span></span></Link>
@@ -27,7 +27,7 @@ const NavBar = () => {
       <div className="flex items-center gap-8 pr-5">
         <label class="relative block">
           <span class="sr-only">Search</span>
-          <input class="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-[243px] h-[38px] rounded-xs pl-8 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-[12px]" placeholder="What are you looking for" type="text" name="search" />
+          <input class="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-60 h-8 rounded-xs pl-8 text-xs" placeholder="What are you looking for" type="text" name="search" />
           <span class="absolute inset-y-0 right-0 flex items-center pr-2">
             <CiSearch className="h-6 w-6" />
           </span>

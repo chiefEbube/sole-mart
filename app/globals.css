@@ -35,3 +35,7 @@
   position: absolute;
   bottom: 0;
 }
+
+.slick-slide > div{
+  margin: 0 10px;
+}

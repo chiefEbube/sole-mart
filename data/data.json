@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "name": "Trainers",
+        "price": 7500.00,
+        "stars": 3.5,
+        "reviews": 121,
+        "remaining": 10,
+        "isLike": false,
+        "image": "/assets/images/red-nike.svg",
+        "background": "#CF3620"
+    },
+
+    {
+        "id": 2,
+        "name": "Vans",
+        "price": 8000.00,
+        "stars": 2.5,
+        "reviews": 121,
+        "remaining": 5,
+        "isLike": false,
+        "image": "/assets/images/red-shoe.svg",
+        "background": "#ED8C00"
+    },
+
+    {
+        "id": 3,
+        "name": "Stilletto",
+        "price": 4500.00,
+        "stars": 3.5,
+        "reviews": 121,
+        "remaining": 1,
+        "isLike": false,
+        "image": "/assets/images/stilletos.svg",
+        "background": "#F7F5F7"
+    },
+
+    {
+        "id": 4,
+        "name": "Point Hell",
+        "price": 6750.00,
+        "stars": 4.5,
+        "reviews": 121,
+        "remaining": 3,
+        "isLike": false,
+        "image": "/assets/images/point-hill.svg",
+        "background": "#F7F5F7"
+    },
+
+    {
+        "id": 1,
+        "name": "Trainers",
+        "price": 7500,
+        "stars": 3.5,
+        "reviews": 121,
+        "remaining": 10,
+        "isLike": false,
+        "image": "/assets/images/red-nike.svg",
+        "background": "#CF3620"
+    },
+
+    {
+        "id": 3,
+        "name": "Stilletto",
+        "price": 4500.00,
+        "stars": 3.5,
+        "reviews": 121,
+        "remaining": 1,
+        "isLike": false,
+        "image": "/assets/images/stilletos.svg",
+        "background": "#F7F5F7"
+    }
+]
