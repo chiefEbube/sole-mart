@@ -2,7 +2,8 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { CiSearch, CiShoppingCart } from "react-icons/ci";
+import { CiSearch } from "react-icons/ci";
+import { GrCart } from "react-icons/gr";
 
 
 const NavBar = () => {
@@ -33,7 +34,9 @@ const NavBar = () => {
           </span>
         </label>
         <div>
-          <CiShoppingCart className="h-6 w-6"/>
+        <Link href="/cart" className={`${pathname === '/cart' ? 'text-[#FF3333]' : ''}`}>
+          <GrCart className="h-6 w-6"/>
+          </Link>
         </div>
       </div>
     </nav>

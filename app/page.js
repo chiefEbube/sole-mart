@@ -1,6 +1,5 @@
 import ProductsList from "@/components/ProductsList";
 import Image from "next/image";
-import { IoIosArrowDown } from "react-icons/io";
 import { FaAngleRight, FaChevronDown } from "react-icons/fa6";
 
 export default function Home() {
