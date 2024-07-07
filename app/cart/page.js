@@ -1,5 +1,6 @@
 import SelectedItems from "@/components/SelectedItems";
 import Link from "next/link"
+import { CiSearch } from "react-icons/ci";
 import { FaAngleRight } from "react-icons/fa6";
 
 
