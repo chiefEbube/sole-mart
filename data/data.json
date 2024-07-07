@@ -45,29 +45,5 @@
         "isLike": false,
         "image": "/assets/images/point-hill.svg",
         "background": "#F7F5F7"
-    },
-
-    {
-        "id": 1,
-        "name": "Trainers",
-        "price": 7500,
-        "stars": 3.5,
-        "reviews": 121,
-        "remaining": 10,
-        "isLike": false,
-        "image": "/assets/images/red-nike.svg",
-        "background": "#CF3620"
-    },
-
-    {
-        "id": 3,
-        "name": "Stilletto",
-        "price": 4500.00,
-        "stars": 3.5,
-        "reviews": 121,
-        "remaining": 1,
-        "isLike": false,
-        "image": "/assets/images/stilletos.svg",
-        "background": "#F7F5F7"
     }
 ]

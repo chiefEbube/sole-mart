@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { CiSearch, CiShoppingBasket, CiShoppingCart } from "react-icons/ci";
+import { CiSearch, CiShoppingCart } from "react-icons/ci";
 
 
 const NavBar = () => {

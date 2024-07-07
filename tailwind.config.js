@@ -23,6 +23,8 @@ module.exports = {
       'accentBg': '#F0F0F0',
       'blackBg': '#000000',
       'btn': '#2C3E50',
+      'footerBg': '#263238',
+      'darkForeGround': '#F5F7FA'
     },
     extend: {
     },
