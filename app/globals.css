@@ -57,3 +57,12 @@
 .gradient-background {
   background: linear-gradient(to bottom, #F4E8F3 33.33%, #F3EFF6 33.33%,#EEE0F9 33.33%);
 }
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}

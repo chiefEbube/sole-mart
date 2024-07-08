@@ -1,20 +1,74 @@
 "use client"
 
-import { createContext, useState, useContext } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import productsData from '@/data/products.json';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
+  useEffect(() => {
+    const count = cartItems.reduce((total, item) => total + item.quantity, 0);
+    setCartCount(count);
+  }, [cartItems]);
+
+  const addToCart = (productId) => {
+    const productToAdd = productsData.find(product => product.id === productId);
+    if (!productToAdd) {
+      console.error(`Product with ID ${productId} not found.`);
+      return;
+    }
+    const existingItemIndex = cartItems.findIndex(item => item.id === productId);
+    if (existingItemIndex !== -1) {
+      const updatedCart = [...cartItems];
+      updatedCart[existingItemIndex].quantity++;
+      setCartItems(updatedCart);
+    } else {
+      setCartItems([...cartItems, { ...productToAdd, quantity: 1 }]);
+    }
+  };
+  
+
+  const removeFromCart = (productId) => {
+    const updatedCart = cartItems.filter(item => item.id !== productId);
+    setCartItems(updatedCart);
   };
 
-  const cartCount = cart.length;
+  const increaseQuantity = (productId) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCart);
+  };
+
+  const decreaseQuantity = (productId) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId && item.quantity > 1) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCart);
+  };
+
+  const updateQuantity = (productId, newQuantity) => {
+    const updatedCart = cartItems.map(item => {
+      if (item.id === productId) {
+        return { ...item, quantity: newQuantity };
+      }
+      return item;
+    });
+    setCartItems(updatedCart);
+  };
+  
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, cartCount }}>
+    <CartContext.Provider value={{ cartItems, cartCount, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, updateQuantity }}>
       {children}
     </CartContext.Provider>
   );

@@ -1,4 +1,5 @@
-import productsData from "@/data/products.json"
+'use client'
+import productsData from "@/data/products.json" 
 import { notFound } from 'next/navigation';
 import ProductsList from "@/app/components/ProductsList";
 import { useCart } from "@/app/context/CartContext";
@@ -27,7 +28,7 @@ export default function ProductDetailPage({ params }) {
           <p className="text-lg mb-4">Rating: {product.stars} stars ({product.reviews} reviews)</p>
           <p className="text-lg mb-4">In Stock: {product.remaining}</p>
           <button
-            onClick={() => addToCart(product)}
+            onClick={() => addToCart(product.id)}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg"
           >
             Add to Cart

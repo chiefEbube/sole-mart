@@ -1,11 +1,17 @@
+"use client"
+
 import SelectedItems from "@/app/components/SelectedItems";
 import Link from "next/link"
 import { FaAngleRight } from "react-icons/fa6";
 import { FiTag } from "react-icons/fi";
 import { TbCurrencyNaira } from "react-icons/tb";
+import { useCart } from '../context/CartContext';
 
 
 const page = () => {
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const padding = true
+
   const width = '800px'
   return (
     <div className="mt-10 px-10 mb-64">
@@ -17,12 +23,13 @@ const page = () => {
 
       <div className="flex flex-col gap-10 items-center justify-center">
         <h1 className="poppins font-extrabold text-[2.6rem]">Your Cart</h1>
-        <SelectedItems width={width} padding={true}/>
-
+        <SelectedItems width={width} padding={padding} items={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
 
 
         <div className="openSans w-1/2 h-[533px] mt-10 px-10 pt-5 pb-10 border border-[#d6d4d4] rounded-3xl">
           <h3 className="text-2xl font-bold">Order Summary</h3>
+          {cartItems.length > 0 ? (
+            <>
           <div className="my-6">
             <div className="text-[#646261] flex justify-between text-xl my-4">
               <span>Subtotal</span>
@@ -55,9 +62,13 @@ const page = () => {
             <button className="h-12 bg-blackBg text-plainWhite font-bold text-base px-10 rounded-full italic">Apply</button>
           </div>
           <Link href='/cart/checkout'><button className="bg-[#3A4980] w-full mt-10 py-5 rounded-full text-plainWhite italic openSans text-base font-bold">Go to Checkout</button></Link>
-        </div>
+          </>
+          ) : (
+            <p>No items in Cart</p>
+          )}
       </div>
     </div>
+    </div >
   )
 }
 

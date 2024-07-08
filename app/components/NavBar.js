@@ -45,7 +45,7 @@ const NavBar = () => {
             <span className="relative">
               <GrCart className="h-6 w-6" />
               {cartCount > 0 && (
-                <span className="absolute top-0 right-0 inline-block w-4 h-4 bg-red-600 text-white rounded-full text-xs leading-tight text-center">
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 bg-redBg text-primaryWhite font-bold rounded-full text-xs text-center">
                   {cartCount}
                 </span>
               )}
