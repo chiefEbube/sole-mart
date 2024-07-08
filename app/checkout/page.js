@@ -1,11 +1,18 @@
+"use client"
+
 import SelectedItems from "@/app/components/SelectedItems";
 import Link from "next/link"
 import { FaAngleRight, FaAngleDown, FaCircleCheck } from "react-icons/fa6";
 import { GoDash } from "react-icons/go";
+import { useCart } from '@/app/context/CartContext';
+
 
 
 const page = () => {
+  const { cartItems, removeFromCart, updateQuantity } = useCart();
   const width = '575px'
+  const padding = false
+
   return (
     <div className="mt-10 px-10 mb-64">
       <div className="flex items-center gap-1 poppins">
@@ -13,14 +20,14 @@ const page = () => {
         <span className="text-[#646261]"><FaAngleRight /></span>
         <Link className="text-[#646261]" href="/cart">Cart</Link>
         <span className="text-[#646261]"><FaAngleRight /></span>
-        <Link className="font-bold" href="/cart/checkout">Checkout</Link>
+        <Link className="font-bold" href="/checkout">Checkout</Link>
       </div>
 
       <div className="">
         <h1 className="text-center bgpoppins font-extrabold text-[2.6rem]">Checkout</h1>
         <div className="flex justify-around mt-10">
           <div className="mt-10">
-            <SelectedItems width={width} padding={false} />
+          <SelectedItems width={width} padding={padding} items={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
           </div>
 
           <div>
@@ -35,6 +42,7 @@ const page = () => {
               <span className="text-[#c7c5c5]"><GoDash /></span>
               <span>Payment</span>
             </div>
+
 
             <form className="text-[#585858] poppins font-medium max-w-[550px]">
               <div className="bg-plainWhite p-10">

@@ -5,7 +5,7 @@ import Link from "next/link"
 import { FaAngleRight } from "react-icons/fa6";
 import { FiTag } from "react-icons/fi";
 import { TbCurrencyNaira } from "react-icons/tb";
-import { useCart } from '../context/CartContext';
+import { useCart } from '@/app/context/CartContext';
 
 
 const page = () => {
@@ -61,7 +61,7 @@ const page = () => {
             </div>
             <button className="h-12 bg-blackBg text-plainWhite font-bold text-base px-10 rounded-full italic">Apply</button>
           </div>
-          <Link href='/cart/checkout'><button className="bg-[#3A4980] w-full mt-10 py-5 rounded-full text-plainWhite italic openSans text-base font-bold">Go to Checkout</button></Link>
+          <Link href='/checkout'><button className="bg-[#3A4980] w-full mt-10 py-5 rounded-full text-plainWhite italic openSans text-base font-bold">Go to Checkout</button></Link>
           </>
           ) : (
             <p>No items in Cart</p>
