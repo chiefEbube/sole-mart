@@ -1,4 +1,6 @@
 "use client"
+
+import { useCart } from '../context/CartContext';
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -8,12 +10,14 @@ import { GrCart } from "react-icons/gr";
 
 const NavBar = () => {
   const pathname = usePathname();
+  const { cartCount } = useCart();
+
 
   return (
     <nav className="container flex items-center justify-between my-8">
-      <Link className="flex items-center gap-2" href="/">
+      <Link className="flex items-center gap-1" href="/">
         <Image
-          src="/assets/images/logo.png"
+          src="/assets/images/logo.svg"
           width={80}
           height={78.1}
         />
@@ -33,12 +37,27 @@ const NavBar = () => {
             <CiSearch className="h-6 w-6" />
           </span>
         </label>
+
+
+
         <div>
-        <Link href="/cart" className={`${pathname === '/cart' ? 'text-[#FF3333]' : ''}`}>
-          <GrCart className="h-6 w-6"/>
+          <Link href="/cart" className={`${pathname === '/cart' ? 'text-[#FF3333]' : ''}`}>
+            <span className="relative">
+              <GrCart className="h-6 w-6" />
+              {cartCount > 0 && (
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 bg-red-600 text-white rounded-full text-xs leading-tight text-center">
+                  {cartCount}
+                </span>
+              )}
+            </span>
           </Link>
         </div>
+
+
+
       </div>
+
+
     </nav>
   )
 }

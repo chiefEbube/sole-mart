@@ -2,6 +2,7 @@
     {
         "id": 1,
         "name": "Trainers",
+        "description": "Experience ultimate comfort and style with our versatile Trainers. Perfect for running, walking, or casual outings. These trainers offer exceptional support and durability.",
         "price": 7500.00,
         "stars": 3.5,
         "reviews": 121,
@@ -10,10 +11,10 @@
         "image": "/assets/images/red-nike.svg",
         "background": "#CF3620"
     },
-
     {
         "id": 2,
         "name": "Vans",
+        "description": "Step into a blend of classic design and modern flair with our Vans. Ideal for skateboarding or everyday wear, these shoes combine durability with a timeless look.",
         "price": 8000.00,
         "stars": 2.5,
         "reviews": 121,
@@ -22,22 +23,22 @@
         "image": "/assets/images/red-shoe.svg",
         "background": "#ED8C00"
     },
-
     {
         "id": 3,
-        "name": "Stilletto",
+        "name": "Stiletto",
+        "description": "Elevate your style with our elegant Stilettos. Perfect for formal occasions or a night out, these heels add a touch of sophistication to any outfit.",
         "price": 4500.00,
         "stars": 3.5,
         "reviews": 121,
-        "remaining": 1,
+        "remaining": 3,
         "isLike": false,
         "image": "/assets/images/stilletos.svg",
         "background": "#F7F5F7"
     },
-
     {
         "id": 4,
-        "name": "Point Hell",
+        "name": "Point Heel",
+        "description": "Make a statement with our chic Point Heels. Combining comfort with style, these heels are perfect for both professional settings and stylish evenings.",
         "price": 6750.00,
         "stars": 4.5,
         "reviews": 121,

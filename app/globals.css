@@ -43,3 +43,17 @@
 .slick-slide > div{
   margin: 0 10px;
 }
+
+.input{
+  border: 1px solid #e8e8e8;
+  padding: 0.65em;
+  width: 100%;
+  display: block;
+  outline: none;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom, #F4E8F3 33.33%, #F3EFF6 33.33%,#EEE0F9 33.33%);
+}

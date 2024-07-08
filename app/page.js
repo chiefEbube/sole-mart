@@ -1,6 +1,8 @@
-import ProductsList from "@/components/ProductsList";
+import ProductsList from "@/app/components/ProductsList";
 import Image from "next/image";
 import { FaAngleRight, FaChevronDown } from "react-icons/fa6";
+import productsData from "@/data/products.json"
+
 
 export default function Home() {
   const preferences = ['Shoe type', 'Price', 'Size selection', 'Color', 'Material', 'Brand'];
@@ -24,15 +26,28 @@ export default function Home() {
         </div>
 
         <div className="flex gap-4">
-          { preferences.map((preference) => (
+          {preferences.map((preference) => (
             <div className="flex items-center bg-[#EBEDEC] px-4 rounded-full">
-            <span className="mr-2">{preference}</span>
-            <span><FaChevronDown /></span>
-          </div>
+              <span className="mr-2">{preference}</span>
+              <span><FaChevronDown /></span>
+            </div>
           ))}
         </div>
       </section>
-      <ProductsList />
+      <ProductsList products={productsData}/>
+
+      <section className="bg-[#D9D9D9] px-10 py-5 mt-16">
+        <div className="flex w-7/8 mx-auto items-center justify-around">
+          <Image src='/assets/images/profile.png' width={150} height={150} />
+          <div className="w-3/5 openSans">
+            <div className="text-[#717171] italic text-xl font-normal">
+            I recently purchased a pair of sneakers from SoleMart, and I couldn't be happier with my experience. The website was easy to navigate, and I found exactly what I was looking for within minutes. 
+            </div>
+            <div className="openSans text-2xl font-semibold text-[#0469AD] mt-5">Joshua Kim</div>
+          </div>
+        </div>
+
+      </section>
     </div>
   );
 }

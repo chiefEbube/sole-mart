@@ -1,6 +1,7 @@
-import NavBar from "@/components/NavBar";
+import { CartProvider } from '@/app/context/CartContext';
+import NavBar from "@/app/components/NavBar";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import Footer from "@/app/components/Footer";
 
 
 export const metadata = {
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-bodyBg">
-        <NavBar/>
-        <main>
-          {children}
-        </main>
-        <Footer/>
+        <CartProvider>
+          <NavBar />
+          <main>
+            {children}
+          </main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
