@@ -63,24 +63,24 @@ const page = () => {
                       <div className="text-xs flex flex-col lg:flex-row gap-5 my-5">
                         <div>
                           <label htmlFor="firstName">First Name</label>
-                          <input required type="text" id="firstName" className='input' />
+                          <input type="text" id="firstName" className='input' />
                         </div>
 
                         <div>
                           <label htmlFor="lastName">Last Name</label>
-                          <input required type="text" id="lastName" className='input' />
+                          <input type="text" id="lastName" className='input' />
                         </div>
                       </div>
 
                       <div className="my-5 text-xs">
                         <label htmlFor="email">Email</label>
-                        <input required type="emai" id="email" className="input" />
+                        <input type="emai" id="email" className="input" />
                       </div>
 
 
                       <div className="my-5 text-xs">
                         <label htmlFor="phone">Phone Number</label>
-                        <input required type="text" id="phone" className='input' />
+                        <input type="text" id="phone" className='input' />
                       </div>
                     </div>
 
@@ -89,34 +89,34 @@ const page = () => {
 
                       <div className="my-5 text-xs">
                         <label htmlFor="flat">Flat/House no.</label>
-                        <input required type="text" id="flat" className='input' />
+                        <input type="text" id="flat" className='input' />
                       </div>
 
                       <div className="my-5 text-xs">
                         <label htmlFor="address">Address</label>
-                        <input required type="text" id="address" className="input" />
+                        <input type="text" id="address" className="input" />
                       </div>
 
 
                       <div className="flex flex-col lg:flex-row gap-5 text-xs my-5">
                         <div>
                           <label htmlFor="city">City</label>
-                          <input required type="text" id="city" className='input' />
+                          <input type="text" id="city" className='input' />
                         </div>
 
                         <div>
                           <label htmlFor="state">State</label>
-                          <input required type="text" id="state" className='input' />
+                          <input type="text" id="state" className='input' />
                         </div>
                       </div>
 
                       <div className="lg:w-1/2 lg:mx-auto text-xs">
                         <label htmlFor="postalCode">Postal Code</label>
-                        <input required type="text" id="postalCode" className='input' />
+                        <input type="text" id="postalCode" className='input' />
                       </div>
                     </div>
                     <div className="lg:flex p-4 lg:p-0 justify-end mt-8 mx-auto">
-                      <button className="bg-[#3A4980] text-plainWhite font-extrabold w-full py-2 lg:py-3 lg:px-6 rounded-md" onClick={(e) => handleClickContinue(e)}>Continue</button>
+                      <button className="bg-[#3A4980] text-plainWhite font-extrabold w-full py-2 lg:py-3 lg:px-6 rounded-md" onClick={(e) => toggleContinue(e)}>Continue</button>
                     </div>
                   </form>
 
