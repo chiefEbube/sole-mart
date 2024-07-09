@@ -101,7 +101,7 @@ export const CartProvider = ({ children }) => {
 
   const updateQuantity = (productId, newQuantity) => {
     const updatedCart = cartItems.map(item => {
-      if (item.id === productId) {
+      if (item.id === productId && newQuantity > 0) {
         return { ...item, quantity: newQuantity };
       }
       return item;

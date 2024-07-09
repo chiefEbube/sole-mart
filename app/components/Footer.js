@@ -2,29 +2,15 @@ import { FaInstagram, FaDribbble, FaTwitter, FaYoutube } from "react-icons/fa6"
 import { FiSend } from "react-icons/fi";
 
 const Footer = () => {
-  const footerItems = [
-    {
-      name: 'Company',
-      items: [
-        'About us', 'Blog', 'Contact us', 'Pricing', 'Testiimonials'
-      ]
-    },
-    {
-      name: 'Support',
-      items: [
-        'Help center', 'Terms of service', 'Legal', 'Privacy policy', 'Status'
-      ]
-    },
-  ]
   return (
     <div className="bg-footerBg w-full px-4 py-12 text-plainWhite lg:grid lg:place-items-center inter text-xs">
-      <div className="flex flex-col lg:flex-row lg:w-4/5 lg:items-center lg:justify-between">
-        <div className="text-[#F5F7FA] text-xs mb-5">
+      <div className="p-2 flex flex-col lg:flex-row lg:w-4/5 lg:items-start lg:justify-between">
+        <div className="text-[#F5F7FA] text-xs lg:text-sm">
           <div>
             <span>Copyright © 2024 Sole Mart Nig.</span>
             <span className="block">All rights reserved</span>
           </div>
-          <div className="flex mt-5 lg:mt-10 text-base gap-5">
+          <div className="flex mt-5 text-base gap-5">
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaInstagram /></span>
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaDribbble /></span>
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaTwitter /></span>
@@ -32,20 +18,7 @@ const Footer = () => {
           </div>
         </div>
 
-
-        <div className="flex flex-col lg:flex-row gap-12">
-          {footerItems.map((footerItem) => (
-            <div>
-              <h3 className="text-sm font-semibold mb-5">{footerItem.name}</h3>
-              <div className="flex flex-col gap-3 mt-3 text-[#F5F7FA]">
-                {footerItem.items.map((item) => (
-                  <a href="#">{item}</a>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          <div>
+          <div className="mt-10 lg:mt-0">
             <h3 className="text-sm font-semibold mb-5">Stay up to date</h3>
             <div className="flex items-center gap-8 pr-5">
               <label class="relative block">
@@ -56,7 +29,6 @@ const Footer = () => {
               </label>
             </div>
           </div>
-        </div>
       </div>
     </div>
   )

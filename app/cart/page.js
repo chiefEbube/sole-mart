@@ -16,6 +16,12 @@ const page = () => {
   const padding = true
 
   const width = '800px'
+
+  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const discount = subtotal * 0.05;
+  const deliveryFee = 1000;
+  const total = subtotal - discount + deliveryFee;
+
   return (
     <div className="mt-10 px-2 lg:px-10 mb-64">
       <div className="flex items-center gap-1 poppins">
@@ -36,20 +42,20 @@ const page = () => {
               <div className="my-6">
                 <div className="text-[#646261] flex justify-between text-base lg:text-xl my-4">
                   <span>Subtotal</span>
-                  <span className="flex items-center inter font-bold text-[#000] text-base lg:text-xl"><TbCurrencyNaira className="text-lg lg:text-2xl" />24550.00</span>
+                  <span className="flex items-center inter font-bold text-[#000] text-base lg:text-xl"><TbCurrencyNaira className="text-lg lg:text-2xl" />{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="text-[#646261] flex justify-between text-base lg:text-xl my-4">
                   <span>Discount (-5%)</span>
-                  <span className="flex items-center text-[#FF3333]"><TbCurrencyNaira className="text-lg lg:text-2xl" />1227</span>
+                  <span className="flex items-center text-[#FF3333]"><TbCurrencyNaira className="text-lg lg:text-2xl" />{discount.toFixed(2)}</span>
                 </div>
                 <div className="text-[#646261] flex justify-between text-base lg:text-xl my-4">
                   <span>Delivery Fee</span>
-                  <span className="flex items-center text-[#000]"><TbCurrencyNaira className="text-lg lg:text-2xl" />1000</span>
+                  <span className="flex items-center text-[#000]"><TbCurrencyNaira className="text-lg lg:text-2xl" />{deliveryFee.toFixed(2)}</span>
                 </div>
                 <hr className="text-[#d6d4d4]" />
                 <div className="flex justify-between text-base lg:text-xl my-4">
                   <span>Total</span>
-                  <span className="flex items-center text-[#000] text-lg lg:text-2xl font-bold"><TbCurrencyNaira className="text-xl lg:text-3xl" />24322.5</span>
+                  <span className="flex items-center text-[#000] text-lg lg:text-2xl font-bold"><TbCurrencyNaira className="text-xl lg:text-3xl" />{total.toFixed(2)}</span>
                 </div>
               </div>
               <Link href='/checkout'><button className="bg-[#3A4980] w-full mt-10 py-2 lg:py-5 rounded-full text-plainWhite italic openSans text-sm lg:text-base font-bold">Go to Checkout</button></Link>
@@ -58,7 +64,7 @@ const page = () => {
         ) : (
           <section className="my-32">
             <h1 className="text-center mb-6 lg:mb-16 font-bold text-2xl lg:text-4xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
-            <ProductsList products={productsData}/>
+            <ProductsList products={productsData} />
           </section>
         )}
       </div>

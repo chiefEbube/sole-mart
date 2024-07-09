@@ -76,8 +76,8 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
                 <button><FaRegBookmark className='bg-plainWhite p-1' /></button>
                 <button onClick={() => removeFromCart(product.id)}><RiDeleteBinFill className='text-[#FF3333]' /></button>
               </div>
-              <div className='flex gap-5 bg-[#F0F0F0] py-1 px-2 rounded-full'>
-                <button className='text-xs' onClick={() => updateQuantity(product.id, product.quantity - 1)}><FiMinus /></button>
+              <div className='flex gap-5 bg-[#F0F0F0] py-2 px-2 rounded-full'>
+                <button className='text-xs disabled:cursor-not-allowed' onClick={() => updateQuantity(product.id, product.quantity - 1)}disabled={product.quantity === 1}><FiMinus /></button>
                 <p className='italic font-bold text-xs'>{product.quantity}</p>
                 <button className='text-xs' onClick={() => updateQuantity(product.id, product.quantity + 1)}><FiPlus /></button>
               </div>
