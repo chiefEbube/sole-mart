@@ -8,7 +8,7 @@
         "reviews": 121,
         "remaining": 10,    
         "isLike": false,
-        "image": "/assets/images/red-nike.svg",
+        "image": "/assets/images/shoe01.jpg",
         "background": "#CF3620",
         "color": "Red",
         "quantity": 0
@@ -22,7 +22,7 @@
         "reviews": 121,
         "remaining": 5,
         "isLike": false,
-        "image": "/assets/images/red-shoe.svg",
+        "image": "/assets/images/shoe02.jpg",
         "background": "#ED8C00",
         "color": "Orange",
         "quantity": 0
@@ -36,7 +36,7 @@
         "reviews": 121,
         "remaining": 3,
         "isLike": false,
-        "image": "/assets/images/stilletos.svg",
+        "image": "/assets/images/shoe03.jpg",
         "background": "#F7F5F7",
         "color": "White",
         "quantity": 0
@@ -50,7 +50,7 @@
         "reviews": 121,
         "remaining": 3,
         "isLike": false,
-        "image": "/assets/images/point-hill.svg",
+        "image": "/assets/images/shoe04.jpg",
         "background": "#F7F5F7",
         "color": "White",
         "quantity": 0

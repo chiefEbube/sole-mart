@@ -14,7 +14,7 @@ const ProductsList = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
   const totalPages = Math.ceil(products.length / itemsPerPage);
-  
+
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -27,39 +27,47 @@ const ProductsList = ({ products }) => {
 
   return (
     <div>
-      <div className='inter flex items-center justify-center gap-5'>
+      <div className='inter flex flex-wrap flex-auto w-10 items-center justify-center gap-5'>
         {
           paginatedProducts.map((product) => (
             <Link href={`/products/${product.id}`}>
 
-              <div className='bg-whiteBg mb-6 pb-5 w-[300px] transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
-                <div style={{ backgroundColor: product.background }} className='w-[95%] h-[249px] relative flex justify-center items-center mx-auto'>
-                  <div className='bg-plainWhite absolute right-2 top-3 w-11 h-11 flex items-center justify-center rounded-full'>
-                    <FaRegHeart className='text-[#667085] text-2xl' />
+              <div className='bg-whiteBg mb-6 pb-5 lg:w-[250px] h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
+                <div className='w-[95%] h-[                                                                                                                                                                                                                                                                                                                                                   249px] relative flex justify-center items-center mx-auto'>
+                  <div className='bg-plainWhite absolute right-2 top-3 w-10 h-10 flex items-center justify-center rounded-full'>
+                    <FaRegHeart className='text-[#667085] text-xl' />                                                           
                   </div>
-                  <img className='object-cover w-full h-full' src={product.image} />
+                  <div className='relative w-full h-full'>
+                    <Image
+                      className='object-cover rounded-t-2xl'
+                      src={product.image}
+                      alt='Product Image'
+                      layout='fill'
+                    />
+                  </div>
                 </div>
 
                 <div className='flex flex-col items-center gap-2 p-4'>
                   <div className='flex items-center w-full justify-between'>
-                    <p className='text-[#667085] text-lg font-semibold'>{product.name}</p>
-                    <p className='text-lg flex items-center font-semibold'>
+                    <p className='text-[#667085] text-base font-semibold'>{product.name}</p>
+                    <p className='text-md flex items-center font-semibold'>
                       <TbCurrencyNaira className='text-2xl' />{product.price}
                     </p>
                   </div>
 
-                  <p className='w-full text-[#98A2B3] text-sm'>{product.remaining} pieces available</p>
+                  <p className='w-full text-[#98A2B3] text-sm'>{product.remaining} types of shoos available</p>
                   <div className='flex items-center w-full justify-start'>
-                    <GoldStars numberOfStars={product.stars} />
+                    <GoldStars numberOfStars={product.stars} className={'flex items-center'}/>
                     <p className='text-sm'>({product.reviews})</p>
                   </div>
 
-                  {/* <div className='flex items-center w-full justify-between gap-4 mt-3'>
-                  <button className="w-32 h-8 bg-secondaryBg text-plainWhite text-sm rounded-3xl inter font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-90 duration-300">Add To Cart</button>
-                  <button className="w-32 h-8 bg-plainWhite text-secondaryBg outline outline-1 outline-secondaryBg text-sm rounded-3xl inter font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-90 duration-300">Add Shortlist</button>
-
-                </div> */}
+                  <Link className='w-full mt-3' href={`/products/${product.id}`}>
+                    <button className="w-full h-8 bg-secondaryBg text-plainWhite text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300">View Details</button>
+                  </Link>
                 </div>
+
+
+
               </div>
             </Link>
 
