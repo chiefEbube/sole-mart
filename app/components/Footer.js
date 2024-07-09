@@ -17,14 +17,14 @@ const Footer = () => {
     },
   ]
   return (
-    <div className="bg-footerBg w-full py-12 text-plainWhite grid place-items-center inter text-xs">
-      <div className="flex w-4/5 items-center justify-between">
-        <div className="text-[#F5F7FA] text-xs">
+    <div className="bg-footerBg w-full px-4 py-12 text-plainWhite lg:grid lg:place-items-center inter text-xs">
+      <div className="flex flex-col lg:flex-row lg:w-4/5 lg:items-center lg:justify-between">
+        <div className="text-[#F5F7FA] text-xs mb-5">
           <div>
             <span>Copyright © 2024 Sole Mart Nig.</span>
             <span className="block">All rights reserved</span>
           </div>
-          <div className="flex mt-10 text-base gap-5">
+          <div className="flex mt-5 lg:mt-10 text-base gap-5">
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaInstagram /></span>
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaDribbble /></span>
             <span className="bg-[#3C474d] w-8 h-8 flex items-center justify-center rounded-full"><FaTwitter /></span>
@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
 
-        <div className="flex gap-12">
+        <div className="flex flex-col lg:flex-row gap-12">
           {footerItems.map((footerItem) => (
             <div>
               <h3 className="text-sm font-semibold mb-5">{footerItem.name}</h3>
