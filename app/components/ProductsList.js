@@ -30,10 +30,10 @@ const ProductsList = ({ products }) => {
       <div className='inter flex flex-wrap items-center justify-center lg:gap-5'>
         {
           paginatedProducts.map((product) => (
-            <Link href={`/products/${product.id}`} className='w-[170px] p-3'>
+            <Link href={`/products/${product.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] p-3'>
 
               <div className='bg-whiteBg mb-6 pb-5 h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
-                <div className='w-full lg:w-[95%] h-[200px] lg:h-[269px] relative flex justify-center items-center mx-auto'>
+                <div className='w-full sm:w-[95%] h-[200px] sm:h-[269px] md:h-[200px] relative flex justify-center items-center mx-auto'>
                   <div className='bg-plainWhite absolute right-2 top-3 w-10 h-10 flex items-center justify-center rounded-full'>
                     <FaRegHeart className='text-[#667085] text-xl' />                                                           
                   </div>
@@ -49,9 +49,9 @@ const ProductsList = ({ products }) => {
 
                 <div className='flex flex-col items-center gap-2 p-4'>
                   <div className='flex items-center w-full justify-between'>
-                    <p className='text-[#667085] text-xs lg:text-base font-semibold'>{product.name}</p>
-                    <p className='text-md text-sm lg:text-base flex items-center font-semibold'>
-                      <TbCurrencyNaira className='text-base lg:text-2xl' />{product.price}
+                    <p className='text-[#667085] text-xs sm:text-base font-semibold'>{product.name}</p>
+                    <p className='text-md text-sm sm:text-base flex items-center font-semibold'>
+                      <TbCurrencyNaira className='text-base sm:text-2xl' />{product.price}
                     </p>
                   </div>
 
@@ -62,7 +62,7 @@ const ProductsList = ({ products }) => {
                   </div>
 
                   <Link className='w-full mt-3' href={`/products/${product.id}`}>
-                    <button className="w-full h-7 lg:h-8 bg-secondaryBg text-plainWhite text-xs lg:text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300">View Details</button>
+                    <button className="w-full h-7 sm:h-10 bg-secondaryBg text-plainWhite text-xs lg:text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300">View Details</button>
                   </Link>
                 </div>
 
@@ -78,7 +78,7 @@ const ProductsList = ({ products }) => {
 
       <div className='flex justify-center lg:gap-4 lg:mt-14'>
         <button
-          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm py-1 px-2 lg:py-2 lg:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm py-1 px-2 sm:py-2 sm:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -87,14 +87,14 @@ const ProductsList = ({ products }) => {
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
-            className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm font-semibold py-1 px-2 lg:py-2 lg:px-4 border border-[#e3e3e3] ${currentPage === i + 1 ? 'gradient-background' : 'bg-[#FAF7EF]'}`}
+            className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm font-semibold py-1 px-2 sm:py-2 sm:px-4 border border-[#e3e3e3] ${currentPage === i + 1 ? 'gradient-background' : 'bg-[#FAF7EF]'}`}
             onClick={() => handlePageChange(i + 1)}
           >
             {i + 1}
           </button>
         ))}
         <button
-          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm px-1 py-2 lg:py-2 lg:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm px-1 py-2 sm:py-2 sm:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

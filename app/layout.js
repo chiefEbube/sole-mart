@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-bodyBg">
+      <body className="bg-bodyBg md:bg-goldBg lg:bg-secondaryBg">
         <CartProvider>
           <NavBar />
           <main>

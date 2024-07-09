@@ -56,11 +56,11 @@ const page = () => {
                     <span>Payment</span>
                   </div>
 
-                  <form className="text-[#585858] poppins lg:font-medium max-w-[550px]">
+                  <form className="text-[#585858] poppins lg:font-medium sm:mx-auto max-w-[550px]">
                     <div className="lg:bg-plainWhite p-4 lg:p-10">
-                      <h3 className="lg:text-xl">Contact Details</h3>
+                      <h3 className="sm:text-xl">Contact Details</h3>
 
-                      <div className="text-xs flex flex-col lg:flex-row gap-5 my-5">
+                      <div className="text-xs sm:text-base flex flex-col lg:flex-row gap-5 my-5">
                         <div>
                           <label htmlFor="firstName">First Name</label>
                           <input type="text" id="firstName" className='input' />
@@ -72,33 +72,33 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className="my-5 text-xs">
+                      <div className="my-5 text-xs sm:text-base">
                         <label htmlFor="email">Email</label>
                         <input type="emai" id="email" className="input" />
                       </div>
 
 
-                      <div className="my-5 text-xs">
+                      <div className="my-5 text-xs sm:text-base">
                         <label htmlFor="phone">Phone Number</label>
                         <input type="text" id="phone" className='input' />
                       </div>
                     </div>
 
                     <div className="lg:bg-plainWhite p-4 lg:p-10 mt-10">
-                      <h3 className="lg:text-xl">Shipping Details</h3>
+                      <h3 className="sm:text-xl">Shipping Details</h3>
 
-                      <div className="my-5 text-xs">
+                      <div className="my-5 text-xs sm:text-base">
                         <label htmlFor="flat">Flat/House no.</label>
                         <input type="text" id="flat" className='input' />
                       </div>
 
-                      <div className="my-5 text-xs">
+                      <div className="my-5 text-xs sm:text-base">
                         <label htmlFor="address">Address</label>
                         <input type="text" id="address" className="input" />
                       </div>
 
 
-                      <div className="flex flex-col lg:flex-row gap-5 text-xs my-5">
+                      <div className="flex flex-col lg:flex-row gap-5 text-xs sm:text-base my-5">
                         <div>
                           <label htmlFor="city">City</label>
                           <input type="text" id="city" className='input' />
@@ -110,7 +110,7 @@ const page = () => {
                         </div>
                       </div>
 
-                      <div className="lg:w-1/2 lg:mx-auto text-xs">
+                      <div className="lg:w-1/2 lg:mx-auto text-xs sm:text-base">
                         <label htmlFor="postalCode">Postal Code</label>
                         <input type="text" id="postalCode" className='input' />
                       </div>
@@ -134,10 +134,10 @@ const page = () => {
                       <span className="text-[#3A4980]"><GoDash /></span>
                       <span className="text-[#3A4980]">Payment</span>
                     </div>
-                    <form className="text-[#585858] poppins font-medium max-w-[550px]">
+                    <form className="text-[#585858] poppins font-medium max-w-[550px] sm:mx-auto">
                       <div className="bg-plainWhite p-5">
                         <h3 className="text-xl font-medium">Payment Methods</h3>
-                        <div className="flex items-center">
+                        <div className="flex items-center justify-between">
                           <div>
                             <div className="option my-5">
                               <div class="radio-container">
@@ -180,7 +180,7 @@ const page = () => {
                       </div>
                     </form>
 
-                    <div className="flex justify-start mt-8">
+                    <div className="flex justify-center lg:justify-start mt-8">
                       <button type="button" className="border border-[#3A4980] text-[#3A4980] bg-plainWhite py-3 px-10 rounded-md" onClick={(e) => toggleContinue(e)}>Back</button>
                     </div>
                   </>

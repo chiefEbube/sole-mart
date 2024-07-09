@@ -50,7 +50,7 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
     </div>
 
 
-    <div className={`flex lg:hidden flex-col h-auto px-5 pb-2 border border-[#d6d4d4] rounded-3xl`}>
+    <div className={`w-11/12 flex lg:hidden flex-col h-auto px-5 pb-2 border border-[#d6d4d4] rounded-3xl`}>
       {items && items.length === 0 ? (
         <div className="flex justify-center items-center h-full">
           <p className="openSans font-semibold text-xl text-[#111111b3]">Oops! Seems you haven't added any items to your cart</p>

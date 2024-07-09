@@ -23,8 +23,8 @@ export default function ProductDetailPage({ params }) {
 
   return (
     <div className="mb-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-10">
-        <div className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] mx-auto">
+      <div className="grid sm:items-center grid-cols-1 sm:grid-cols-2 w-11/12 gap-4 mx-auto my-10">
+        <div className="w-[300px] h-[300px] sm:h-[400px] mx-auto">
           <img src={product.image} alt={product.name} className="object-cover h-full w-full" />
         </div>
 
@@ -33,7 +33,7 @@ export default function ProductDetailPage({ params }) {
           <GoldStars numberOfStars={product.stars} className={'flex'} />
           <p className="poppins mt-4 mr-8">{product.stars}/5</p>
           <p className="text-xl font-bold text-[#eb2828d4] text-gray-800 flex items-center"><TbCurrencyNaira className="inline text-2xl" />{product.price}</p>
-          <p className="poppins text-[#0000007a] my-4 text-sm lg:text-base">{product.description}</p>
+          <p className="poppins text-[#0000007a] my-4 sm:my-2 text-sm lg:text-base">{product.description}</p>
           <section className="flex poppins text-base text-[#526475] gap-5 font-medium">
             <div className="flex items-center bg-[#f1f1f0] py-3 px-4 text-sm lg:text-base rounded-3xl">
               <span>Class</span>
@@ -43,7 +43,7 @@ export default function ProductDetailPage({ params }) {
             </div>
           </section>
           <div>
-            <button onClick={() => addToCart(product.id)} className="w-full lg:w-10/12 bg-secondaryBg text-plainWhite text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300 mt-12 py-4">Add to Cart
+            <button onClick={() => addToCart(product.id)} className="w-full lg:w-10/12 bg-secondaryBg text-plainWhite text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300 mt-12 sm:mt-8 py-4">Add to Cart
             </button>
           </div>
         </div>
