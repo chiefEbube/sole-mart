@@ -35,18 +35,18 @@ export default function Home() {
         <ProductsList products={productsData} />
       </section>
 
-      <section className="bg-[#D9D9D9] p-3 lg:px-10 lg:py-5 mt-16">
+      {/* <section className="w-full bg-[#D9D9D9] p-3 lg:px-10 lg:py-5 mt-16">
         <div className="flex gap-5 lg:w-7/8 lg:mx-auto items-center justify-around">
           <Image src='/assets/images/profile.png' width={150} height={150} />
           <div className="lg:w-3/5 openSans">
-            <div className="text-[#717171] italic text-xs lg:text-xl font-normal">
+            <div className="text-[#717171] italic text-sm lg:text-xl font-normal">
               I recently purchased a pair of sneakers from SoleMart, and I couldn't be happier with my experience. The website was easy to navigate, and I found exactly what I was looking for within minutes.
             </div>
             <div className="openSans text-sm lg:text-2xl font-semibold text-[#0469AD] mt-5">Joshua Kim</div>
           </div>
         </div>
 
-      </section>
+      </section> */}
     </div >
   );
 }
