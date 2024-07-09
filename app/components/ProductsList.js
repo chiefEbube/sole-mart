@@ -49,9 +49,9 @@ const ProductsList = ({ products }) => {
 
                 <div className='flex flex-col items-center gap-2 p-4'>
                   <div className='flex items-center w-full justify-between'>
-                    <p className='text-[#667085] text-sm lg:text-base font-semibold'>{product.name}</p>
+                    <p className='text-[#667085] text-xs lg:text-base font-semibold'>{product.name}</p>
                     <p className='text-md text-sm lg:text-base flex items-center font-semibold'>
-                      <TbCurrencyNaira className='text-2xl' />{product.price}
+                      <TbCurrencyNaira className='text-base lg:text-2xl' />{product.price}
                     </p>
                   </div>
 
