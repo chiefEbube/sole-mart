@@ -143,20 +143,20 @@ const page = () => {
                               <div class="radio-container">
                                 <input id="cash" type="radio" name="payment" class="custom-radio" />
                                 <label for="cash" class="radio-label">
-                                  <p className="text-[15px] text-[#585858] font-medium">Pay on Delivery</p>
+                                  <p className="text-[15px] text-[#585858] font-semibold">Pay on Delivery</p>
                                 </label>
                               </div>
-                              <span className="text-[#585858] text-[13px] ml-10">Pay with cash on delivery</span>
+                              <span className="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay with cash on delivery</span>
                             </div>
 
                             <div className="option my-5">
                               <div class="radio-container">
                                 <input id="card" type="radio" name="payment" class="custom-radio" />
                                 <label for="card" class="radio-label">
-                                  <p className="text-[15px] text-[#585858] font-medium">Debit Cards</p>
+                                  <p className="text-[15px] text-[#585858] font-semibold">Debit Cards</p>
                                 </label>
                               </div>
-                              <span className="text-[#585858] text-[13px] ml-10">Pay with Debit Card</span>
+                              <span className="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay with Debit Card</span>
                             </div>
 
 
@@ -164,10 +164,10 @@ const page = () => {
                               <div class="radio-container">
                                 <input id="transfer" type="radio" name="payment" class="custom-radio" />
                                 <label for="transfer" class="radio-label">
-                                  <p class="text-[15px] text-[#585858] font-medium">Direct Bank Transfer</p>
+                                  <p class="text-[15px] text-[#585858] font-semibold">Direct Bank Transfer</p>
                                 </label>
                               </div>
-                              <span class="text-[#585858] text-[13px] ml-10">Make payment through your bank account</span>
+                              <span class="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay through your bank account</span>
                             </div>
                           </div>
 
