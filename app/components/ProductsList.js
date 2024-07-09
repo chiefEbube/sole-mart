@@ -27,13 +27,13 @@ const ProductsList = ({ products }) => {
 
   return (
     <div>
-      <div className='inter flex flex-wrap flex-auto w-10 items-center justify-center gap-5'>
+      <div className='inter flex flex-wrap items-center justify-center gap-5'>
         {
           paginatedProducts.map((product) => (
             <Link href={`/products/${product.id}`}>
 
-              <div className='bg-whiteBg mb-6 pb-5 lg:w-[250px] h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
-                <div className='w-[95%] h-[                                                                                                                                                                                                                                                                                                                                                   249px] relative flex justify-center items-center mx-auto'>
+              <div className='bg-whiteBg mb-6 pb-5 w-[250px] h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
+                <div className='w-[95%] h-[249px] relative flex justify-center items-center mx-auto'>
                   <div className='bg-plainWhite absolute right-2 top-3 w-10 h-10 flex items-center justify-center rounded-full'>
                     <FaRegHeart className='text-[#667085] text-xl' />                                                           
                   </div>
@@ -76,9 +76,9 @@ const ProductsList = ({ products }) => {
       </div>
 
 
-      <div className='flex justify-center gap-4 mt-14'>
+      <div className='flex justify-center lg:gap-4 lg:mt-14'>
         <button
-          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm py-2 px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm py-1 px-2 lg:py-2 lg:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -87,14 +87,14 @@ const ProductsList = ({ products }) => {
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
-            className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm font-semibold py-2 px-4 border border-[#e3e3e3] ${currentPage === i + 1 ? 'gradient-background' : 'bg-[#FAF7EF]'}`}
+            className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm font-semibold py-1 px-2 lg:py-2 lg:px-4 border border-[#e3e3e3] ${currentPage === i + 1 ? 'gradient-background' : 'bg-[#FAF7EF]'}`}
             onClick={() => handlePageChange(i + 1)}
           >
             {i + 1}
           </button>
         ))}
         <button
-          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm py-2 px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
+          className={`transition ease-in-out delay-100 hover:scale-110 duration-300 poppins text-[#667085] text-sm px-1 py-2 lg:py-2 lg:px-4 border border-[#e3e3e3] bg-[#FAF7EF] ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

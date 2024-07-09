@@ -8,19 +8,19 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="mb-24">
-      <header className="bg-greyBg flex items-center lg:justify-between mx-4 lg:mx-16 p-4 lg:pl-14 rounded-2xl">
+      <header className="bg-greyBg w-[397px] flex items-center lg:justify-between mx-auto lg:mx-16 px-2 pt-4 lg:pl-14 rounded-2xl"> 
         <div className="">
-          <h3 className="text-primaryBg poppins text-2xl lg:text-[2.5rem] lg:w-[457px] lg:h-[162px] font-extrabold lg:font-bold">Grab Up to 5% Off On Selected Shoe</h3>
+          <h3 className="text-primaryBg poppins text-xl w-[180px] lg:text-[2.5rem] lg:w-[457px] lg:h-[162px] font-extrabold lg:font-bold">Grab Up to 5% Off On Selected Shoe</h3>
           <Link href={"#collections"}>
-            <div className="lg:ml-12 flex items-center justify-center w-32 py-2 lg:py-0 mt-4 lg:mt-0 lg:w-[136px] lg:h-[49px] bg-btn text-plainWhite text-base rounded-3xl inter font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-90 duration-300">
+            <div className="lg:ml-12 flex items-center justify-center w-28 py-2 lg:py-0 mt-4 lg:mt-0 lg:w-[136px] lg:h-[49px] bg-btn text-plainWhite text-sm lg:text-base rounded-xl lg:rounded-3xl inter font-semibold transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-90 duration-300">
               Buy Now
             </div>
           </Link>
 
         </div>
-        <div className="-mt-12 -mr-16 lg:-mr-12">
-          <Image src="/assets/images/black-shoe.png" width={612} height={361} />
-        </div>
+          <div className="w-[301px] h-[180px] lg:w-[612px] lg:h-[612px] -mt-12 -mr-16 lg:-mr-12"> 
+          <img src="/assets/images/black-shoe.png" className="w-full h-full object-cover"/>
+          </div>
       </header >
 
       <section className="flex my-8 lg:m-16 poppins pl-7 text-sm text-[#1D364D] font-medium">
