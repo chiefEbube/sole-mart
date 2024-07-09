@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
         </div>
 
-          <div className="mt-10 lg:mt-0">
+          <div className="mt-10 lg:mt-0 ">
             <h3 className="text-sm font-semibold mb-5">Stay up to date</h3>
             <div className="flex items-center gap-8 pr-5">
               <label class="relative block">

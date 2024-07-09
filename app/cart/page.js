@@ -37,7 +37,7 @@ const page = () => {
 
         {cartItems.length > 0 ? (
           <>
-            <div className="openSans w-full lg:w-1/2 h-auto mt-10 px-10 pt-5 pb-10 border border-[#d6d4d4] rounded-3xl">
+            <div className="openSans w-11/12 lg:w-1/2 h-auto mt-10 px-10 pt-5 pb-10 border border-[#d6d4d4] rounded-3xl">
               <h3 className="text-lg lg:text-2xl font-bold">Order Summary</h3>
               <div className="my-6">
                 <div className="text-[#646261] flex justify-between text-base lg:text-xl my-4">
