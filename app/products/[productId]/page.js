@@ -24,7 +24,7 @@ export default function ProductDetailPage({ params }) {
   return (
     <div className="mb-16">
       <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-10">
-        <div className="w-[400px] h-[400px] lg:w-[450px] lg:h-[450px] mx-auto">
+        <div className="w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] mx-auto">
           <img src={product.image} alt={product.name} className="object-cover h-full w-full" />
         </div>
 
@@ -50,7 +50,7 @@ export default function ProductDetailPage({ params }) {
       </div>
 
       <section className="my-32">
-        <h1 className="text-center mb-16 font-bold text-4xl uppercase text-[#231F20] poppins">You May Also Like</h1>
+        <h1 className="text-center mb-6 lg:mb-16 font-bold text-2xl lg:text-4xl uppercase text-[#231F20] poppins">You May Also Like</h1>
         <ProductsList products={relatedProducts} />
       </section>
     </div>
