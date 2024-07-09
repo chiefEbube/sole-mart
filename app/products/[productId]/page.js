@@ -24,16 +24,16 @@ export default function ProductDetailPage({ params }) {
   return (
     <div className="mb-16">
       <div className="grid sm:items-center grid-cols-1 sm:grid-cols-2 w-11/12 gap-4 mx-auto my-10">
-        <div className="w-[300px] h-[300px] sm:h-[400px] mx-auto">
+        <div className="w-[300px] h-[300px] sm:h-[400px] lg:w-[514px] lg:h-[521px] mx-auto">
           <img src={product.image} alt={product.name} className="object-cover h-full w-full" />
         </div>
 
-        <div className="flex flex-col justify-evenly mt-4">
+        <div className="flex flex-col justify-evenly lg:h-[514px] mt-4">
           <h1 className="mb-2 font-bold text-3xl lg:text-5xl uppercase text-[#231F20] poppins">{product.name}</h1>
           <GoldStars numberOfStars={product.stars} className={'flex'} />
           <p className="poppins mt-4 mr-8">{product.stars}/5</p>
           <p className="text-xl font-bold text-[#eb2828d4] text-gray-800 flex items-center"><TbCurrencyNaira className="inline text-2xl" />{product.price}</p>
-          <p className="poppins text-[#0000007a] my-4 sm:my-2 text-sm lg:text-base">{product.description}</p>
+          <p className="poppins text-[#0000007a] my-4 sm:my-2 lg:my-0 text-sm lg:text-base lg:w-3/4">{product.description}</p>
           <section className="flex poppins text-base text-[#526475] gap-5 font-medium">
             <div className="flex items-center bg-[#f1f1f0] py-3 px-4 text-sm lg:text-base rounded-3xl">
               <span>Class</span>

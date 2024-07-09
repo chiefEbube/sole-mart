@@ -30,13 +30,11 @@ const ProductsList = ({ products }) => {
       <div className='inter flex flex-wrap items-center justify-center lg:gap-5'>
         {
           paginatedProducts.map((product) => (
-            <Link href={`/products/${product.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] p-3'>
+            <Link href={`/products/${product.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
 
               <div className='bg-whiteBg mb-6 pb-5 h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
-                <div className='w-full sm:w-[95%] h-[200px] sm:h-[269px] md:h-[200px] relative flex justify-center items-center mx-auto'>
-                  <div className='bg-plainWhite absolute right-2 top-3 w-10 h-10 flex items-center justify-center rounded-full'>
-                    <FaRegHeart className='text-[#667085] text-xl' />                                                           
-                  </div>
+                <div className='w-full sm:w-[95%] h-[200px] sm:h-[269px] md:h-[200px] lg:h-[280px] relative flex justify-center items-center mx-auto'>
+                  
                   <div className='relative w-full h-full'>
                     <Image
                       className='object-cover rounded-t-2xl'

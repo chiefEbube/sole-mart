@@ -10,12 +10,12 @@ import { TbCurrencyNaira } from "react-icons/tb";
 const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }) => {
   return (
     <>
-    <div className={`hidden lg:flex flex-col h-auto ${padding ? 'px-5' : 'px-2'} pt-2 pb-2 border border-[#d6d4d4] rounded-3xl`} style={
+    <div className={`hidden md:flex flex-col h-auto ${padding ? 'px-5' : 'px-2'} pt-2 pb-2 border border-[#d6d4d4] rounded-3xl`} style={
       { width: width, }
       }>
       {items && items.length === 0 ? (
         <div className="flex justify-center items-center h-full">
-          <p className="openSans font-semibold text-xl text-[#111111b3]">Oops! Seems you haven't added any items to your cart</p>
+          <p className="openSans font-semibold text-xl p-5 text-[#111111b3]">Oops! It seems you haven't added any items to your cart</p>
         </div>
       ) : (
         items.map((product, index) => (
@@ -50,10 +50,10 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
     </div>
 
 
-    <div className={`w-11/12 flex lg:hidden flex-col h-auto px-5 pb-2 border border-[#d6d4d4] rounded-3xl`}>
+    <div className={`w-11/12 flex md:hidden flex-col h-auto px-5 pb-2 border border-[#d6d4d4] rounded-3xl`}>
       {items && items.length === 0 ? (
         <div className="flex justify-center items-center h-full">
-          <p className="openSans font-semibold text-xl text-[#111111b3]">Oops! Seems you haven't added any items to your cart</p>
+          <p className="openSans font-semibold text-base p-5 text-[#111111b3]">Oops! Seems you haven't added any items to your cart</p>
         </div>
       ) : (
         items.map((product, index) => (
