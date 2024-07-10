@@ -62,24 +62,24 @@ const page = () => {
 
                       <div className="text-xs sm:text-base flex flex-col lg:flex-row gap-5 my-5">
                         <div>
-                          <label htmlFor="firstName">First Name</label>
+                          <label className="font-medium" htmlFor="firstName">First Name</label>
                           <input type="text" id="firstName" className='input' />
                         </div>
 
                         <div>
-                          <label htmlFor="lastName">Last Name</label>
+                          <label className="font-medium" htmlFor="lastName">Last Name</label>
                           <input type="text" id="lastName" className='input' />
                         </div>
                       </div>
 
                       <div className="my-5 text-xs sm:text-base">
-                        <label htmlFor="email">Email</label>
+                        <label className="font-medium" htmlFor="email">Email</label>
                         <input type="emai" id="email" className="input" />
                       </div>
 
 
                       <div className="my-5 text-xs sm:text-base">
-                        <label htmlFor="phone">Phone Number</label>
+                        <label className="font-medium" htmlFor="phone">Phone Number</label>
                         <input type="text" id="phone" className='input' />
                       </div>
                     </div>
@@ -88,30 +88,30 @@ const page = () => {
                       <h3 className="sm:text-xl font-medium">Shipping Details</h3>
 
                       <div className="my-5 text-xs sm:text-base">
-                        <label htmlFor="flat">Flat/House no.</label>
+                        <label className="font-medium" htmlFor="flat">Flat/House no.</label>
                         <input type="text" id="flat" className='input' />
                       </div>
 
                       <div className="my-5 text-xs sm:text-base">
-                        <label htmlFor="address">Address</label>
+                        <label className="font-medium" htmlFor="address">Address</label>
                         <input type="text" id="address" className="input" />
                       </div>
 
 
                       <div className="flex flex-col lg:flex-row gap-5 text-xs sm:text-base my-5">
                         <div>
-                          <label htmlFor="city">City</label>
+                          <label className="font-medium" htmlFor="city">City</label>
                           <input type="text" id="city" className='input' />
                         </div>
 
                         <div>
-                          <label htmlFor="state">State</label>
+                          <label className="font-medium" htmlFor="state">State</label>
                           <input type="text" id="state" className='input' />
                         </div>
                       </div>
 
                       <div className="lg:w-1/2 lg:mx-auto text-xs sm:text-base">
-                        <label htmlFor="postalCode">Postal Code</label>
+                        <label className="font-medium" htmlFor="postalCode">Postal Code</label>
                         <input type="text" id="postalCode" className='input' />
                       </div>
                     </div>
