@@ -58,7 +58,7 @@ const page = () => {
 
                   <form className="text-[#585858] poppins lg:font-medium sm:mx-auto max-w-[550px]">
                     <div className="lg:bg-plainWhite p-4 lg:p-10">
-                      <h3 className="sm:text-xl">Contact Details</h3>
+                      <h3 className="sm:text-xl font-medium">Contact Details</h3>
 
                       <div className="text-xs sm:text-base flex flex-col lg:flex-row gap-5 my-5">
                         <div>
@@ -85,7 +85,7 @@ const page = () => {
                     </div>
 
                     <div className="lg:bg-plainWhite p-4 lg:p-10 mt-10">
-                      <h3 className="sm:text-xl">Shipping Details</h3>
+                      <h3 className="sm:text-xl font-medium">Shipping Details</h3>
 
                       <div className="my-5 text-xs sm:text-base">
                         <label htmlFor="flat">Flat/House no.</label>
@@ -167,7 +167,7 @@ const page = () => {
                                   <p class="text-[15px] text-[#585858] font-semibold">Direct Bank Transfer</p>
                                 </label>
                               </div>
-                              <span class="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay through your bank account</span>
+                              <span class="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay through your bank</span>
                             </div>
                           </div>
 
