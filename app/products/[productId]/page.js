@@ -3,14 +3,11 @@ import productsData from "@/data/products.json"
 import { notFound } from 'next/navigation';
 import ProductsList from "@/app/components/ProductsList";
 import { useCart } from "@/app/context/CartContext";
-import Image from "next/image";
 import GoldStars from "@/app/components/GoldStars";
 import { TbCurrencyNaira } from "react-icons/tb";
-import { FiMinus, FiPlus } from 'react-icons/fi';
 
 
 export default function ProductDetailPage({ params }) {
-  const { updateQuantity } = useCart();
   const { productId } = params;
   const product = productsData.find((p) => p.id.toString() === productId);
   const { addToCart } = useCart();

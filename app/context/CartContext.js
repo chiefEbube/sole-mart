@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from 'react';
 import productsData from '@/data/products.json';
+import Swal from "sweetalert2";
 
 const CartContext = createContext();
 
@@ -70,6 +71,12 @@ export const CartProvider = ({ children }) => {
     } else {
       setCartItems([...cartItems, { ...productToAdd, quantity: 1 }]);
     }
+
+    return Swal.fire({
+      title: "Added to cart",
+      text: "Item has been successfully added to your cart",
+      icon: "success"
+  })
 
   };
   
