@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
           <div>
-            <h3 className="text-[9px] text-center font-semibold mb-2 md:mb-5">Stay up to date</h3>
+            <h3 className="text-[9px] md:text-base text-center md:text-start font-semibold mb-2 md:mb-5">Stay up to date</h3>
             <div className="flex items-center gap-8 md:pr-5">
               <label class="relative block">
                 <input class="placeholder:text-[#D9DBE1] poppins block bg-[#515A61] w-[163px] md:w-60 h-[23px] md:h-8 rounded-md pl-2 text-[10px]" placeholder="Your email address" type="text" name="email" />
