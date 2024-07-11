@@ -23,7 +23,7 @@ export default function Home() {
       </header >
 
       <section id="collections">
-        <h1 className="text-center mt-16 md:mt-28 mb-6 lg:mb-16 font-bold text-2xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
+        <h1 className="text-center mt-16 md:mt-28 mb-6 lg:mb-16 font-bold text-[13px] sm:text-2xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
         <ProductsList products={productsData} />
       </section>
 

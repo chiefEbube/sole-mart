@@ -50,14 +50,14 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
     </div>
 
 
-    <div className={`w-11/12 flex md:hidden flex-col h-auto px-5 pb-2 border border-[#d6d4d4] rounded-3xl`}>
+    <div className={`w-11/12 flex md:hidden flex-col h-auto px-5 pb-2`}>
       {items && items.length === 0 ? (
         <div className="flex justify-center items-center h-full">
           <p className="openSans font-semibold text-base p-5 text-[#111111b3]">Oops! Seems you haven't added any items to your cart</p>
         </div>
       ) : (
         items.map((product, index) => (
-          <div key={index} className={`h-[150px] flex items-center justify-between gap-6 py-2 ${index !== items.length - 1 ? 'border-b' : ''} border-[#d6d4d4]`}>
+          <div key={index} className={`h-[150px] flex items-center justify-between gap-6 py-2`}>
             <div className='flex items-center gap-5'>
               <div className='w-[100px] h-[100px]'>
                 <img src={product.image} className='rounded-lg w-full h-full object-cover' alt={product.name} />
