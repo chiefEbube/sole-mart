@@ -25,8 +25,8 @@ const NavBar = () => {
 
         <Image
           src="/assets/images/logo.svg"
-          width={20}
-          height={20}
+          width={35}
+          height={35}
           className='block md:hidden'
         />
         <h3 className="poller text-[13px] md:text-xl lg:text-3xl text-primaryBg uppercase">Sole Mart</h3>
@@ -59,9 +59,9 @@ const NavBar = () => {
 
           <Link href="/cart" className={`${pathname === '/cart' ? 'text-[#FF3333]' : ''}`}>
             <span className="relative">
-              <GrCart className="h-6 w-6" />
+              <GrCart className="h-5 w-5 sm:h-6 sm:w-6" />
               {cartCount > 0 && (
-                <span className="absolute top-0 right-0 inline-block w-4 h-4 bg-redBg text-primaryWhite font-bold rounded-full text-xs text-center">
+                <span className="absolute -top-1 right-0 sm:top-0 sm:right-0 inline-block h-3 w-3 sm:w-4 sm:h-4 bg-redBg text-primaryWhite font-bold rounded-full text-[9px] sm:text-xs text-center">
                   {cartCount}
                 </span>
               )}
