@@ -2,7 +2,7 @@
 
 import SelectedItems from "@/app/components/SelectedItems";
 import Link from "next/link"
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight, FaArrowRight } from "react-icons/fa6";
 import { FiTag } from "react-icons/fi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { useCart } from '@/app/context/CartContext';
@@ -58,7 +58,7 @@ const page = () => {
                   <span className="flex items-center text-[#000] text-lg md:text-2xl font-bold"><TbCurrencyNaira className="text-xl md:text-3xl" />{total.toFixed(2)}</span>
                 </div>
               </div>
-              <Link href='/checkout'><button className="bg-[#3A4980] w-full mt-10 py-2 md:py-5 rounded-full text-plainWhite italic openSans text-sm md:text-base font-bold">Go to Checkout</button></Link>
+              <Link href='/checkout'><button className="bg-[#3A4980] w-full mt-10 py-2 md:py-5 rounded-full text-plainWhite italic openSans text-sm md:text-base font-bold flex items-center justify-center gap-3">Go to Checkout <FaArrowRight className="text-2xl"/></button></Link>
             </div>
           </>
         ) : (
