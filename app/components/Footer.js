@@ -3,8 +3,8 @@ import { FiSend } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <div className="bg-footerBg w-full px-4 py-12 text-plainWhite grid place-items-center inter text-xs">
-      <div className="md:p-2 gap-12 md:gap-0 flex md:w-4/5 items-start md:justify-between">
+    <div className="bg-footerBg w-full md:px-4 py-12 text-plainWhite grid place-items-center inter text-xs">
+      <div className="md:p-2 gap-12 md:gap-0 flex w-11/12 md:w-4/5 items-start justify-between md:justify-between">
         <div className="text-[#F5F7FA] text-[6px] sm:text-sm">
           <div>
             <span>Copyright © 2024 Sole Mart Nig.</span>
