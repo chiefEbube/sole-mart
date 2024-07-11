@@ -23,18 +23,19 @@ export default function Home() {
       </header >
 
       <section id="collections">
-        <h1 className="text-center mt-16 mb-6 lg:mb-16 font-bold text-2xl lg:text-4xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
+        <h1 className="text-center mt-16 md:mt-28 mb-6 lg:mb-16 font-bold text-2xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
         <ProductsList products={productsData} />
       </section>
 
-      <section className="w-full bg-[#D9D9D9] p-3 md:px-10 md:py-5 mt-16">
-        <div className="flex gap-5 lg:w-7/8 lg:mx-auto items-center justify-around">
-          <Image src='/assets/images/profile.png' width={150} height={150} />
+      <section className="w-full bg-[#D9D9D9] p-3 md:px-10 md:py-1 mt-16">
+        <div className="flex gap-2 md:gap-5 lg:w-7/8 lg:mx-auto items-center justify-around">
+          <Image src='/assets/images/profile.png' width={150} height={150}  className="hidden md:block"/>
+          <Image src='/assets/images/profile.png' width={40} height={40}  className="md:hidden"/>
           <div className="md:w-3/5 openSans">
-            <div className="text-[#717171] italic text-sm md:text-xl font-normal">
+            <div className="text-[#717171] italic text-[6px] sm:text-sm md:text-xl font-normal">
               I recently purchased a pair of sneakers from SoleMart, and I couldn't be happier with my experience. The website was easy to navigate, and I found exactly what I was looking for within minutes.
             </div>
-            <div className="openSans text-sm lg:text-2xl font-semibold text-[#0469AD] mt-5">Joshua Kim</div>
+            <div className="openSans text-[8px] sm:text-sm lg:text-2xl font-semibold text-[#0469AD] md:mt-5 md:-mb-2">Joshua Kim</div>
           </div>
         </div>
 
