@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-footerBg w-full md:px-4 py-12 text-plainWhite grid place-items-center inter text-xs">
       <div className="md:p-2 gap-12 md:gap-0 flex w-11/12 md:w-4/5 items-start justify-between md:justify-between">
-        <div className="text-[#F5F7FA] text-[6px] sm:text-sm">
+        <div className="text-[#F5F7FA] text-[8px] sm:text-sm">
           <div>
             <span>Copyright © 2024 Sole Mart Nig.</span>
             <span className="block">All rights reserved</span>
@@ -22,9 +22,9 @@ const Footer = () => {
             <h3 className="text-[9px] md:text-base text-center md:text-start font-semibold mb-2 md:mb-5">Stay up to date</h3>
             <div className="flex items-center gap-8 md:pr-5">
               <label class="relative block">
-                <input class="placeholder:text-[#D9DBE1] poppins block bg-[#515A61] w-[163px] md:w-60 h-[23px] md:h-8 rounded-md pl-2 text-[10px]" placeholder="Your email address" type="text" name="email" />
+                <input class="placeholder:text-[#D9DBE1] poppins block bg-[#515A61] w-[163px] md:w-60 h-[23px] md:h-8 rounded-md pl-2 text-[8px]" placeholder="Your email address" type="text" name="email" />
                 <span class="absolute inset-y-0 right-0 flex items-center pr-2">
-                  <FiSend className="h-4 w-4" />
+                  <FiSend className="w-3 h-3 md:h-4 md:w-4" />
                 </span>
               </label>
             </div>
