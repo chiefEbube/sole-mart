@@ -33,7 +33,7 @@ const ProductsList = ({ products }) => {
             <Link href={`/products/${product.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
 
               <div className='bg-whiteBg mb-6 pb-5 h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
-                <div className='w-full sm:w-[95%] h-[200px] sm:h-[269px] md:h-[200px] lg:h-[280px] relative flex justify-center items-center mx-auto'>
+                <div className='w-full sm:w-[95%] h-[150px] sm:h-[269px] md:h-[200px] lg:h-[280px] relative flex justify-center items-center mx-auto'>
                   
                   <div className='relative w-full h-full'>
                     <Image
