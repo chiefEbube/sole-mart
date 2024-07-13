@@ -17,12 +17,12 @@ export const CartProvider = ({ children }) => {
   }, [cartItems]);
 
   const addToCart = (productId) => {
-    const productToAdd = items.find(product => product.id === productId);
+    const productToAdd = items.find(product => product?.unique_id === productId);
     if (!productToAdd) {
       console.error(`Product with ID ${productId} not found.`);
       return;
     }
-    const existingItemIndex = cartItems.findIndex(item => item.id === productId);
+    const existingItemIndex = cartItems.findIndex(item => item?.unique_id === productId);
     if (existingItemIndex !== -1) {
       const updatedCart = [...cartItems];
       updatedCart[existingItemIndex].quantity++;
@@ -41,13 +41,13 @@ export const CartProvider = ({ children }) => {
   
 
   const removeFromCart = (productId) => {
-    const updatedCart = cartItems.filter(item => item.id !== productId);
+    const updatedCart = cartItems.filter(item => item?.unique_id !== productId);
     setCartItems(updatedCart);
   };
 
   const increaseQuantity = (productId) => {
     const updatedCart = cartItems.map(item => {
-      if (item.id === productId) {
+      if (item?.unique_id === productId) {
         return { ...item, quantity: item.quantity + 1 };
       }
       return item;
@@ -57,7 +57,7 @@ export const CartProvider = ({ children }) => {
 
   const decreaseQuantity = (productId) => {
     const updatedCart = cartItems.map(item => {
-      if (item.id === productId && item.quantity > 1) {
+      if (item?.unique_id === productId && item.quantity > 1) {
         return { ...item, quantity: item.quantity - 1 };
       }
       return item;
@@ -67,7 +67,7 @@ export const CartProvider = ({ children }) => {
 
   const updateQuantity = (productId, newQuantity) => {
     const updatedCart = cartItems.map(item => {
-      if (item.id === productId && newQuantity > 0) {
+      if (item?.unique_id === productId && newQuantity > 0) {
         return { ...item, quantity: newQuantity };
       }
       return item;

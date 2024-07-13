@@ -1,10 +1,11 @@
 import ProductsList from "@/app/components/ProductsList"
-import productsData from "@/data/products.json"
+import { useProductsData } from "../context/ProductsDataContext"
 
 
 const ProductsPage = () => {
+  const {items} = useProductsData()
   return (
-    <ProductsList products={productsData}/>
+    <ProductsList products={items}/>
   )
 }
 
