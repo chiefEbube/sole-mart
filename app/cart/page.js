@@ -24,7 +24,7 @@ const page = () => {
 
   const width = '800px'
 
-  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const subtotal = cartItems.reduce((total, item) => total + item?.current_price[0].NGN * item.quantity, 0);
   const discount = subtotal * 0.05;
   const deliveryFee = 1000;
   const total = subtotal - discount + deliveryFee;
@@ -71,7 +71,7 @@ const page = () => {
         ) : (
           <section className="my-32">
             <h1 className="text-center mb-6 md:mb-16 font-bold text-2xl md:text-4xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
-            <ProductsList products={productsData} />
+            <ProductsList products={items} />
           </section>
         )}
       </div>

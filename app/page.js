@@ -3,7 +3,6 @@ import { useProductsData } from "./context/ProductsDataContext";
 import ProductsList from "@/app/components/ProductsList";
 import Image from "next/image";
 import { FaAngleRight, FaChevronDown } from "react-icons/fa6";
-import productsData from "@/data/products.json"
 import Link from "next/link";
 
 
