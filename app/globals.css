@@ -113,3 +113,62 @@
   border-radius: 50%;
   background-color: white;
 }
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid;
+  border-color: #FF3D00 transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+/* Modal styling */
+.modal {
+  display: block;
+  position: fixed; 
+  z-index: 1000; 
+  left: 25%;
+  top:25%;
+  width: 50%; 
+  height: 50%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.845); 
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Spinner styling */
+.spinner {
+  border: 8px solid #f3f3f3; 
+  border-top: 8px solid #3498db; 
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

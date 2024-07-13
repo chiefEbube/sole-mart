@@ -30,7 +30,7 @@ const ProductsList = ({ products }) => {
       <div className='inter flex flex-wrap items-center justify-center lg:gap-5'>
         {
           paginatedProducts.map((product) => (
-            <Link href={`/products/${product.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
+            <Link href={`/products/${product?.url_slug}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
 
               <div className='bg-whiteBg mb-6 pb-5 h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
                 <div className='w-full sm:w-[95%] h-[150px] sm:h-[269px] md:h-[200px] lg:h-[280px] relative flex justify-center items-center mx-auto'>
@@ -38,8 +38,8 @@ const ProductsList = ({ products }) => {
                   <div className='relative w-full h-full'>
                     <Image
                       className='object-cover rounded-t-2xl'
-                      src={product.image}
-                      alt='Product Image'
+                      src={`https://api.timbu.cloud/images/${product?.photos[0].url}`} 
+                      alt={product?.name}
                       layout='fill'
                     />
                   </div>
@@ -47,19 +47,19 @@ const ProductsList = ({ products }) => {
 
                 <div className='flex flex-col items-center gap-2 p-4'>
                   <div className='flex items-center w-full justify-between'>
-                    <p className='text-[#667085] text-xs sm:text-base font-semibold'>{product.name}</p>
+                    <p className='text-[#667085] text-xs sm:text-base font-semibold'>{product?.name}</p>
                     <p className='text-md text-sm sm:text-base flex items-center font-bold tracking-wide'>
-                      <TbCurrencyNaira className='text-base sm:text-2xl' />{product.price}
+                      <TbCurrencyNaira className='text-base sm:text-2xl' />{product?.current_price[0].NGN}
                     </p>
                   </div>
 
-                  <p className='w-full text-[#98A2B3] text-xs lg:text-sm'>{product.remaining} types of shoos available</p>
+                  <p className='w-full text-[#98A2B3] text-xs lg:text-sm'>{product?.available_quantity} types of shoos available</p>
                   <div className='flex items-center w-full justify-start'>
-                    <GoldStars numberOfStars={product.stars} className={'flex items-center'}/>
-                    <p className='text-xs lg:text-sm'>({product.reviews})</p>
+                    <GoldStars numberOfStars={3.5} className={'flex items-center'}/>
+                    <p className='text-xs lg:text-sm'>({121})</p>
                   </div>
 
-                  <Link className='w-full mt-3' href={`/products/${product.id}`}>
+                  <Link className='w-full mt-3' href={`/products/${product?.url_slug}`}>
                     <button className="w-full h-7 sm:h-10 bg-secondaryBg text-plainWhite text-xs lg:text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300">View Details</button>
                   </Link>
                 </div>

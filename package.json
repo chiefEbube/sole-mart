@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.51.1",
+    "axios": "^1.7.2",
     "flowbite-react": "^0.10.1",
     "framer-motion": "^11.2.13",
     "next": "14.2.4",
@@ -21,6 +23,7 @@
     "swiper": "^11.1.4"
   },
   "devDependencies": {
+    "http-proxy-middleware": "^3.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   }

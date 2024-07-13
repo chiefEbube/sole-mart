@@ -1,0 +1,102 @@
+// Data object
+const data = {
+    page: 1,
+    size: 10,
+    total: 30,
+    debug: null,
+    previous_page: null,
+    next_page: "/products?page=2&size=10",
+    items: [
+      {
+        available_quantity: 2,
+        buying_price: null,
+        categories: [],
+        current_price: [{ NGN: [5000, null, []] }],
+        date_created: "2024-07-13T07:41:41",
+        description: "Experience ultimate comfort and style with our versatile Trainers. Perfect for running, walking, or casual outings. These trainers offer exceptional support and durability.",
+        discounted_price: null,
+        extra_infos: null,
+        id: "35a0944e965346c5ba0fc19b0d104cff",
+        is_available: true,
+        is_deleted: false,
+        is_service: false,
+        last_updated: "2024-07-13T07:52:45",
+        name: "Swiss Trainers",
+        organization_id: "650336a3306448fc85d2ad45cf7341f0",
+        parent: null,
+        parent_product_id: null,
+        photos: [
+          {
+            file_rename: false,
+            filename: "2f6675345e1e410aa5edc3c4fd143316.jpg",
+            is_featured: false,
+            is_public: true,
+            model_id: "35a0944e965346c5ba0fc19b0d104cff",
+            model_name: "products",
+            organization_id: "650336a3306448fc85d2ad45cf7341f0",
+            position: 2,
+            save_as_jpg: true,
+            url: "sole-mart-1/product_swiss_trainers_698c85_2.jpg"
+          },
+          {
+            file_rename: false,
+            filename: "a4830cffa5844ba1874679932f5cfc75.jpg",
+            is_featured: false,
+            is_public: true,
+            model_id: "35a0944e965346c5ba0fc19b0d104cff",
+            model_name: "products",
+            organization_id: "650336a3306448fc85d2ad45cf7341f0",
+            position: 1,
+            save_as_jpg: true,
+            url: "sole-mart-1/product_swiss_trainers_04fa7b_1.jpg"
+          }
+        ],
+        previous_url_slugs: null,
+        product_image: [],
+        selling_price: null,
+        unavailable: false,
+        unavailable_end: null,
+        unavailable_start: null,
+        unique_id: "SO196566P",
+        url_slug: "swiss-trainers",
+        user_id: "bc342d8ab3ab4e169d7883f3f2652a69"
+      },
+      // Add more items as needed
+    ]
+  };
+  
+  // Mapping through the items array and extracting details
+  const extractedItems = data.items.map(item => {
+    return {
+      available_quantity: item.available_quantity,
+      buying_price: item.buying_price,
+      categories: item.categories,
+      current_price: item.current_price,
+      date_created: item.date_created,
+      description: item.description,
+      discounted_price: item.discounted_price,
+      extra_infos: item.extra_infos,
+      id: item.id,
+      is_available: item.is_available,
+      is_deleted: item.is_deleted,
+      is_service: item.is_service,
+      last_updated: item.last_updated,
+      name: item.name,
+      organization_id: item.organization_id,
+      parent: item.parent,
+      parent_product_id: item.parent_product_id,
+      photos: item.photos,
+      previous_url_slugs: item.previous_url_slugs,
+      product_image: item.product_image,
+      selling_price: item.selling_price,
+      unavailable: item.unavailable,
+      unavailable_end: item.unavailable_end,
+      unavailable_start: item.unavailable_start,
+      unique_id: item.unique_id,
+      url_slug: item.url_slug,
+      user_id: item.user_id
+    };
+  });
+  
+  // Logging the extracted items to the console
+  console.log(extractedItems);  

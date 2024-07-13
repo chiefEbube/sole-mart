@@ -1,3 +1,5 @@
+"use client"
+import { useProductsData } from "./context/ProductsDataContext";
 import ProductsList from "@/app/components/ProductsList";
 import Image from "next/image";
 import { FaAngleRight, FaChevronDown } from "react-icons/fa6";
@@ -6,6 +8,13 @@ import Link from "next/link";
 
 
 export default function Home() {
+  const {items, isLoading, error} = useProductsData()
+  if (isLoading) {
+    return <p>Loading...</p>; }
+
+if (error) {
+    return <p>Failed to fetch product data"</p>;}
+
   return (
     <div className="mb-16 md:mb-24">
       <header className="bg-greyBg flex items-center lg:justify-between mx-4 lg:mx-16 p-4 md:pl-8 lg:pl-14 rounded-2xl">
@@ -24,7 +33,7 @@ export default function Home() {
 
       <section id="collections">
         <h1 className="text-center mt-16 md:mt-28 mb-6 lg:mb-16 font-bold text-[13px] sm:text-2xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
-        <ProductsList products={productsData} />
+        <ProductsList products={items} />
       </section>
 
       <section className="w-full bg-[#D9D9D9] p-3 md:px-10 md:py-1 mt-16">

@@ -1,5 +1,5 @@
 'use client'
-import productsData from "@/data/products.json"
+import { useProductsData } from "@/app/context/ProductsDataContext";
 import { notFound } from 'next/navigation';
 import ProductsList from "@/app/components/ProductsList";
 import { useCart } from "@/app/context/CartContext";
@@ -8,15 +8,16 @@ import { TbCurrencyNaira } from "react-icons/tb";
 
 
 export default function ProductDetailPage({ params }) {
+  const {items, isLoading, error} = useProductsData()
   const { productId } = params;
-  const product = productsData.find((p) => p.id.toString() === productId);
+  const product = items?.find((p) => p?.unique_id.toString() === productId);
   const { addToCart } = useCart();
 
   if (!product) {
     return notFound();
   }
 
-  const relatedProducts = productsData.filter((p) => p.id !== product.id);
+  const relatedProducts = items.filter((p) => p.unique_id !== product?.unique_id);
 
   return (
     <div className="mb-16">
