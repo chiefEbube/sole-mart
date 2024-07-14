@@ -14,7 +14,7 @@ export const ProductsDataProvider = ({ children }) => {
             const params = {
                 organization_id: process.env.NEXT_PUBLIC_ORGANIZATION_ID,
                 page: 1,
-                size: 20,
+                size: 30,
                 Appid: process.env.NEXT_PUBLIC_APPID,
                 Apikey: process.env.NEXT_PUBLIC_APIKEY,
             };

@@ -12,15 +12,15 @@ import { useState } from 'react';
 
 const ProductsList = ({ products }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 4;
-  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const itemsPerPage = 10;
+  const totalPages = Math.ceil(products?.length / itemsPerPage);
 
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  const paginatedProducts = products.slice(
+  const paginatedProducts = products?.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
@@ -29,8 +29,8 @@ const ProductsList = ({ products }) => {
     <div>
       <div className='inter flex flex-wrap items-center justify-center lg:gap-5'>
         {
-          paginatedProducts.map((product) => (
-            <Link href={`/products/${product?.unique_id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
+          paginatedProducts?.map((product) => (
+            <Link href={`/${product?.id}`} className='w-[170px] xs:w-[210px] sm:w-[300px] md:w-[220px] lg:w-[305px] p-3'>
 
               <div className='bg-whiteBg mb-6 pb-5 h-auto transition ease-in-out delay-200 hover:scale-110 duration-300 cursor-pointer'>
                 <div className='w-full sm:w-[95%] h-[150px] sm:h-[269px] md:h-[200px] lg:h-[280px] relative flex justify-center items-center mx-auto'>
@@ -59,7 +59,7 @@ const ProductsList = ({ products }) => {
                     <p className='text-xs lg:text-sm'>({121})</p>
                   </div>
 
-                  <Link className='w-full mt-3' href={`/products/${product?.unique_id}`}>
+                  <Link className='w-full mt-3' href={`/${product?.id}`}>
                     <button className="w-full h-7 sm:h-10 bg-secondaryBg text-plainWhite text-xs lg:text-sm rounded-3xl inter font-semibold hover:opacity-90 duration-300">View Details</button>
                   </Link>
                 </div>

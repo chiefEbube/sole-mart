@@ -7,24 +7,22 @@ import { FiTag } from "react-icons/fi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { useCart } from '@/app/context/CartContext';
 import ProductsList from "../components/ProductsList";
+import AllProducts from "../components/allProducts";
 
 
 
 const page = () => {
-  const { items, isLoading, error } = useProductsData()
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
-
-  if (error) {
-    return <p>Failed to fetch product data"</p>;
-  }
   const { cartItems, removeFromCart, updateQuantity } = useCart();
   const padding = true
 
   const width = '800px'
 
-  const subtotal = cartItems.reduce((total, item) => total + item?.current_price[0].NGN * item.quantity, 0);
+  const subtotal = cartItems.reduce((total, item) => {
+    const quantity = parseInt(item.extra_infos.find(info => info.key === 'qtyInCart')?.value, 10) || 1;
+    const price = item?.current_price[0] || 0;
+    return total + price * quantity;
+  }, 0);
+
   const discount = subtotal * 0.05;
   const deliveryFee = 1000;
   const total = subtotal - discount + deliveryFee;
@@ -69,10 +67,7 @@ const page = () => {
             </div>
           </>
         ) : (
-          <section className="my-32">
-            <h1 className="text-center mb-6 md:mb-16 font-bold text-2xl md:text-4xl uppercase text-[#231F20] poppins">Browse Our Collections</h1>
-            <ProductsList products={items} />
-          </section>
+          <AllProducts heading={"BROWSE OUR COLLECTIONS"} />
         )}
       </div>
     </div >
