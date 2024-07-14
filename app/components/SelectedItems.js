@@ -5,15 +5,10 @@ import { FiMinus, FiPlus } from 'react-icons/fi';
 import { RiDeleteBinFill } from 'react-icons/ri';
 import { TbCurrencyNaira } from "react-icons/tb";
 
-const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }) => {
+const SelectedItems = ({ width, padding, items, removeFromCart, increaseQuantity, decreaseQuantity }) => {
   const getColor = (extraInfos) => {
     const colorInfo = extraInfos?.find(info => info?.key === 'color');
     return colorInfo ? colorInfo?.value : 'White';
-  };
-  
-  const getPrice = (extraInfos) => {
-    const priceInfo = extraInfos?.find(info => info?.key === 'current_price');
-    return priceInfo ? priceInfo?.value : '0';
   };
   
   const getQtyInCart = (extraInfos) => {
@@ -41,7 +36,7 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
                   <p className='openSans font-semibold text-xl'>{product?.name}</p>
                   <p className='openSans font-light text-sm'><span className='font-normal'>Color:</span><span className='text-[#646261]'>{getColor(product?.extra_infos)}</span></p>
                   <p className='text-md flex items-center inter font-bold'>
-                    <TbCurrencyNaira className='text-2xl' />{getPrice(product?.extra_infos)}
+                    <TbCurrencyNaira className='text-2xl' />{product?.current_price}
                   </p>
                 </div>
               </div>
@@ -52,9 +47,9 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
                   <button onClick={() => removeFromCart(product?.id)}><RiDeleteBinFill className='text-[#FF3333]' /></button>
                 </div>
                 <div className='flex gap-5 bg-[#F0F0F0] py-3 px-6 rounded-full'>
-                  <button className='text-xl' onClick={() => updateQuantity(product?.id, getQtyInCart(product?.extra_infos) - 1)} disabled={getQtyInCart(product?.extra_infos) === 1}><FiMinus /></button>
+                  <button className='text-xl' onClick={() => decreaseQuantity(product?.id)} disabled={getQtyInCart(product?.extra_infos) === 1}><FiMinus /></button>
                   <p className='italic font-bold text-sm'>{getQtyInCart(product?.extra_infos)}</p>
-                  <button className='text-xl' onClick={() => updateQuantity(product?.id, getQtyInCart(product?.extra_infos) + 1)}><FiPlus /></button>
+                  <button className='text-xl' onClick={() =>increaseQuantity(product?.id)}><FiPlus /></button>
                 </div>
               </div>
             </div>
@@ -79,7 +74,7 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
                   <p className='openSans font-semibold text-xs'>{product?.name}</p>
                   <p className='openSans font-light text-xs'><span className='font-normal'>Color:</span> <span className='text-[#646261]'>{getColor(product?.extra_infos)}</span></p>
                   <p className='text-xs flex items-center inter font-bold'>
-                    <TbCurrencyNaira className='text-sm' />{getPrice(product?.extra_infos)}
+                    <TbCurrencyNaira className='text-sm' />{product?.current_price}
                   </p>
                 </div>
               </div>
@@ -90,9 +85,9 @@ const SelectedItems = ({ width, padding, items, removeFromCart, updateQuantity }
                   <button onClick={() => removeFromCart(product?.id)}><RiDeleteBinFill className='text-[#FF3333]' /></button>
                 </div>
                 <div className='flex gap-5 bg-[#F0F0F0] py-2 px-2 rounded-full'>
-                  <button className='text-xs disabled:cursor-not-allowed' onClick={() => updateQuantity(product?.id, getQtyInCart(product?.extra_infos) - 1)} disabled={getQtyInCart(product?.extra_infos) === 1}><FiMinus /></button>
+                  <button className='text-xs disabled:cursor-not-allowed' onClick={() => decreaseQuantity(product?.id)} disabled={getQtyInCart(product?.extra_infos) === 1}><FiMinus /></button>
                   <p className='italic font-bold text-xs'>{getQtyInCart(product?.extra_infos)}</p>
-                  <button className='text-xs' onClick={() => updateQuantity(product?.id, getQtyInCart(product?.extra_infos) + 1)}><FiPlus /></button>
+                  <button className='text-xs' onClick={() => increaseQuantity(product?.id)}><FiPlus /></button>
                 </div>
               </div>
             </div>

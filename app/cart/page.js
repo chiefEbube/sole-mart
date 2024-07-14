@@ -1,25 +1,22 @@
 "use client"
-import { useProductsData } from "../context/ProductsDataContext";
 import SelectedItems from "@/app/components/SelectedItems";
 import Link from "next/link"
 import { FaAngleRight, FaArrowRight } from "react-icons/fa6";
-import { FiTag } from "react-icons/fi";
 import { TbCurrencyNaira } from "react-icons/tb";
 import { useCart } from '@/app/context/CartContext';
-import ProductsList from "../components/ProductsList";
 import AllProducts from "../components/allProducts";
 
 
 
 const page = () => {
-  const { cartItems, removeFromCart, updateQuantity } = useCart();
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } = useCart();
   const padding = true
 
   const width = '800px'
 
   const subtotal = cartItems.reduce((total, item) => {
     const quantity = parseInt(item.extra_infos.find(info => info.key === 'qtyInCart')?.value, 10) || 1;
-    const price = item?.current_price[0] || 0;
+    const price = item?.current_price || 0;
     return total + price * quantity;
   }, 0);
 
@@ -37,7 +34,7 @@ const page = () => {
 
       <div className="flex flex-col gap-10 items-center justify-center">
         <h1 className="poppins font-extrabold mt-10 md:mt-0 text-2xl md:text-[2.6rem]">Your Cart</h1>
-        <SelectedItems width={width} padding={padding} items={cartItems} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
+        <SelectedItems width={width} padding={padding} items={cartItems} removeFromCart={removeFromCart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
 
 
         {cartItems.length > 0 ? (

@@ -87,7 +87,7 @@ export function CartProvider({ children }) {
 
   const updateQuantityInCart = (productId, change) => {
     const updatedCart = cartItems.map(item => {
-      if (item?.unique_id === productId) {
+      if (item?.id === productId) {
         const updatedExtraInfos = item.extra_infos.map(info => {
           if (info.key === 'qtyInCart') {
             const newValue = parseInt(info.value, 10) + change;
