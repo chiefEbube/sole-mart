@@ -18,14 +18,16 @@ export const ProductsDataProvider = ({ children }) => {
                 Appid: process.env.NEXT_PUBLIC_APPID,
                 Apikey: process.env.NEXT_PUBLIC_APIKEY,
             };
-            const apiUrl = 'https://timbu-get-all-products.reavdev.workers.dev/'
+            const apiUrl = '/api/products'
 
 
             const response = await axios.get(apiUrl, { params });
             return response.data;
+
         }
     });
 
+    console.log(data)
     return (
         <ProductsDataContext.Provider value={{ items: data?.items, isLoading, error }}>
             {children}

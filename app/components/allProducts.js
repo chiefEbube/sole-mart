@@ -1,15 +1,29 @@
 "use client"
+
 import { useProductsData } from "@/app/context/ProductsDataContext";
 import ProductsList from "@/app/components/ProductsList";
 
-const AllProducts = ({heading}) => {
+const AllProducts = ({ heading }) => {
     const { items, isLoading, error } = useProductsData()
     if (isLoading) {
-        return <p className="text-center my-10 italic text-footerBg">Loading items...</p>;
+        return (
+            <>
+                <div class="lds-roller">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </>
+        );
     }
 
     if (error) {
-        return <p>Failed to fetch product data"</p>;
+        return <p className="mt-[4em] text-center text-footerBg"><span className="italic">Failed to fetch product data</span> 😔</p>;
     }
     return (
         <section id="collections">
