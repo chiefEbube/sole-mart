@@ -8,7 +8,7 @@ const AllProducts = ({ heading }) => {
     if (isLoading) {
         return (
             <>
-                <div class="lds-roller">
+                <div className="lds-roller">
                     <div></div>
                     <div></div>
                     <div></div>

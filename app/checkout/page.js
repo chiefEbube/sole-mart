@@ -140,9 +140,9 @@ const page = () => {
                         <div className="flex items-center justify-between">
                           <div>
                             <div className="option my-5">
-                              <div class="radio-container">
-                                <input id="cash" type="radio" name="payment" class="custom-radio" />
-                                <label for="cash" class="radio-label">
+                              <div className="radio-container">
+                                <input id="cash" type="radio" name="payment" className="custom-radio" />
+                                <label for="cash" className="radio-label">
                                   <p className="text-[15px] text-[#585858] font-semibold">Pay on Delivery</p>
                                 </label>
                               </div>
@@ -150,9 +150,9 @@ const page = () => {
                             </div>
 
                             <div className="option my-5">
-                              <div class="radio-container">
-                                <input id="card" type="radio" name="payment" class="custom-radio" />
-                                <label for="card" class="radio-label">
+                              <div className="radio-container">
+                                <input id="card" type="radio" name="payment" className="custom-radio" />
+                                <label for="card" className="radio-label">
                                   <p className="text-[15px] text-[#585858] font-semibold">Debit Cards</p>
                                 </label>
                               </div>
@@ -160,14 +160,14 @@ const page = () => {
                             </div>
 
 
-                            <div class="option my-5">
-                              <div class="radio-container">
-                                <input id="transfer" type="radio" name="payment" class="custom-radio" />
-                                <label for="transfer" class="radio-label">
-                                  <p class="text-[15px] text-[#585858] font-semibold">Direct Bank Transfer</p>
+                            <div className="option my-5">
+                              <div className="radio-container">
+                                <input id="transfer" type="radio" name="payment" className="custom-radio" />
+                                <label for="transfer" className="radio-label">
+                                  <p className="text-[15px] text-[#585858] font-semibold">Direct Bank Transfer</p>
                                 </label>
                               </div>
-                              <span class="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay through your bank</span>
+                              <span className="font-base text-[#585858] text-[10px] lg:text-[13px] ml-10 -mt-5">Pay through your bank</span>
                             </div>
                           </div>
 

@@ -37,18 +37,18 @@ const NavBar = () => {
         <Link className={`relative ${pathname === '/checkout' ? 'active' : ''}`} href="/checkout">Checkout<span></span></Link>
       </div>
       <div className="flex items-center gap-3 md:gap-8 pr-5">
-        <label class="relative hidden md:block">
-          <span class="sr-only">Search</span>
-          <input class="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-60 h-8 rounded-xs pl-8 text-xs" placeholder="What are you looking for" type="text" name="search" />
-          <span class="absolute inset-y-0 right-0 flex items-center pr-2">
+        <label className="relative hidden md:block">
+          <span className="sr-only">Search</span>
+          <input className="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-60 h-8 rounded-xs pl-8 text-xs" placeholder="What are you looking for" type="text" name="search" />
+          <span className="absolute inset-y-0 right-0 flex items-center pr-2">
             <CiSearch className="h-6 w-6" />
           </span>
         </label>
 
-        <label class="relative md:hidden">
-          <span class="sr-only">Search</span>
-          <input class="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-40 h-6 rounded-xs pl-2 text-[10px]" placeholder="What are you looking for" type="text" name="search" />
-          <span class="absolute inset-y-0 right-0 flex items-center">
+        <label className="relative md:hidden">
+          <span className="sr-only">Search</span>
+          <input className="placeholder:text-slate-40 poppins block bg-[#f5f5f5] w-40 h-6 rounded-xs pl-2 text-[10px]" placeholder="What are you looking for" type="text" name="search" />
+          <span className="absolute inset-y-0 right-0 flex items-center">
             <CiSearch className="h-6 w-6" />
           </span>
         </label>
