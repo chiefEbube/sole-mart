@@ -21,7 +21,7 @@ export function CartProvider({ children }) {
     const Appid = process.env.NEXT_PUBLIC_APPID;
     const Apikey = process.env.NEXT_PUBLIC_APIKEY;
     try {
-      const res = await fetch(`https://timbu-get-single-product.reavdev.workers.dev/${productId}?organization_id=${organization_id}&Appid=${Appid}&Apikey=${Apikey}`);
+      const res = await fetch(`https://api.timbu.cloud/products/${productId}?organization_id=${organization_id}&Appid=${Appid}&Apikey=${Apikey}`);
 
       if (!res.ok) {
         throw new Error('Failed to fetch product data');
